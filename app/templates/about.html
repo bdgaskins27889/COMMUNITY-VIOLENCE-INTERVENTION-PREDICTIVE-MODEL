@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CVI Risk Predictor</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.9) !important;
+        }
+        
+        .content-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+        
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .profile-icon {
+            font-size: 5rem;
+        }
+        
+        .contact-card {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">🛡️ CVI Risk Predictor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/methodology">Methodology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4 mb-5">
+        <h1 class="mb-4">About This Project</h1>
+        
+        <div class="content-section">
+            <h2>Project Overview</h2>
+            <p>
+                The <strong>CVI Risk Predictor</strong> is a data science tool designed to support Community Violence 
+                Intervention (CVI) organizations in making proactive, data-driven decisions about resource allocation 
+                and intervention strategies. By analyzing publicly available crime, socioeconomic, and environmental 
+                data at the neighborhood level, this tool provides actionable risk assessments that help CVI teams 
+                anticipate and prevent violence.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Purpose & Mission</h2>
+            <p>
+                Community Violence Intervention programs are highly effective at reducing violence through trusted 
+                messengers, conflict mediation, and relationship-based outreach. However, many CVI organizations 
+                operate with limited analytical capacity. This tool aims to:
+            </p>
+            <ul>
+                <li>Identify emerging violence hotspots before incidents escalate</li>
+                <li>Enable strategic resource allocation across neighborhoods</li>
+                <li>Provide objective risk assessments for grant applications and reporting</li>
+                <li>Support coordination between CVI programs and public health partners</li>
+            </ul>
+            <p>
+                <strong>This is a tool for prevention, not punishment.</strong> It explicitly rejects use for 
+                predictive policing, surveillance, or any punitive applications.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>About the Creator</h2>
+            <div class="profile-section">
+                <div class="profile-icon">👩‍💻</div>
+                <div>
+                    <h3>Barbara D. Gaskins</h3>
+                    <p>
+                        <strong>Data Science Graduate Student | Criminal Justice Reform Advocate | AI & Justice Researcher</strong>
+                    </p>
+                    <p>
+                        Barbara is a nationally recognized gang specialist and reentry coach with expertise in criminal 
+                        justice reform. She holds a National Certification in Reentry Coaching, a B.A. in Behavioral Science 
+                        from Bellevue University, and an M.S. in Justice and Security Administration from University of Phoenix. 
+                        She is currently pursuing a Graduate Certification in Data Science with a focus on AI & Criminal Justice.
+                    </p>
+                    <p>
+                        Her work bridges data science, criminal justice reform, and community violence intervention, with a 
+                        commitment to ethical AI implementation that serves communities rather than surveilling them.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Academic Foundation</h2>
+            <p>
+                This project builds on academic research conducted for the DSC 680 capstone course at Bellevue University 
+                (December 2025). The original paper, <em>"Predictive Modeling for Community Violence Intervention Decision 
+                Support,"</em> established the theoretical framework and ethical principles that guide this tool.
+            </p>
+            <p>
+                Key contributions beyond the academic work include:
+            </p>
+            <ul>
+                <li>Transformation from theoretical framework to functional software</li>
+                <li>Implementation of multi-city adaptability</li>
+                <li>Creation of user-friendly web interface for non-technical users</li>
+                <li>Validation with real data collection from live public APIs</li>
+                <li>Development of comprehensive replication toolkit</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Technical Stack</h2>
+            <p>This project demonstrates proficiency in:</p>
+            <ul>
+                <li><strong>Programming:</strong> Python 3.11+, Object-Oriented Design</li>
+                <li><strong>Data Science:</strong> pandas, numpy, scikit-learn</li>
+                <li><strong>Machine Learning:</strong> Logistic Regression, Random Forest, K-Means Clustering</li>
+                <li><strong>Geospatial Analysis:</strong> geopandas, shapely, folium</li>
+                <li><strong>Web Development:</strong> Flask, HTML/CSS/JavaScript, RESTful APIs</li>
+                <li><strong>Data Visualization:</strong> Chart.js, Leaflet maps, interactive dashboards</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Contact Information</h2>
+            <div class="contact-card">
+                <h4>Barbara D. Gaskins</h4>
+                <p class="mb-2">
+                    📧 <strong>Email:</strong> <a href="mailto:bdgaskins27889@gmail.com">bdgaskins27889@gmail.com</a>
+                </p>
+                <p class="mb-2">
+                    📱 <strong>Phone:</strong> 252.495.3173
+                </p>
+                <p class="mb-0">
+                    💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/barbara-gaskins" target="_blank">linkedin.com/in/barbara-gaskins</a>
+                </p>
+            </div>
+            <p class="mt-3">
+                <strong>For CVI organizations interested in using this tool:</strong> Please reach out to discuss 
+                implementation, training, and customization for your specific needs.
+            </p>
+            <p>
+                <strong>For technical inquiries or collaboration:</strong> This project is open-source and available 
+                on GitHub. Contributions and feedback are welcome.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Acknowledgments</h2>
+            <ul>
+                <li><strong>City of Chicago</strong> - Open data portal and crime statistics</li>
+                <li><strong>U.S. Census Bureau</strong> - American Community Survey data</li>
+                <li><strong>CDC/ATSDR</strong> - Social Vulnerability Index</li>
+                <li><strong>Community Violence Intervention Organizations</strong> - Inspiration and real-world insights</li>
+                <li><strong>Bellevue University</strong> - Academic support and guidance</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Disclaimer</h2>
+            <p>
+                This tool is provided for educational and violence prevention purposes only. Predictions are based on 
+                historical data and should be used as one input among many in decision-making processes. The tool does 
+                not guarantee prevention of violence and should be combined with community knowledge, lived experience, 
+                and professional judgment. Users are responsible for ensuring ethical and appropriate use of this tool.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-2"><strong>CVI Risk Predictor</strong> | Built with ❤️ for Community Violence Intervention</p>
+            <p class="mb-0">© 2026 Barbara D. Gaskins | Data Science Portfolio Project</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

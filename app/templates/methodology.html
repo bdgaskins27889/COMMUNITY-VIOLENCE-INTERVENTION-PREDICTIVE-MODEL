@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology - CVI Risk Predictor</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.9) !important;
+        }
+        
+        .content-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+        
+        .model-card {
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .model-card h4 {
+            color: #667eea;
+        }
+        
+        .metric-badge {
+            background-color: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">🛡️ CVI Risk Predictor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/methodology">Methodology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4 mb-5">
+        <h1 class="mb-4">Technical Methodology</h1>
+        
+        <div class="content-section">
+            <h2>Overview</h2>
+            <p>
+                The CVI Risk Predictor employs a multi-model machine learning approach to assess neighborhood-level 
+                violence risk. Our methodology integrates diverse data sources and applies advanced predictive analytics 
+                while maintaining strict ethical safeguards.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Data Sources</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Data Category</th>
+                        <th>Source</th>
+                        <th>Update Frequency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Crime Incidents</strong></td>
+                        <td>City Open Data Portals</td>
+                        <td>Daily</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Socioeconomic Data</strong></td>
+                        <td>U.S. Census Bureau (ACS)</td>
+                        <td>Annually</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Social Vulnerability</strong></td>
+                        <td>CDC Social Vulnerability Index</td>
+                        <td>Every 2 years</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Environmental Data</strong></td>
+                        <td>311 Service Requests, OpenStreetMap</td>
+                        <td>Daily</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-section">
+            <h2>Machine Learning Models</h2>
+            
+            <div class="model-card">
+                <h4>1. Logistic Regression</h4>
+                <p><strong>Purpose:</strong> Interpretable baseline model for understanding risk factors</p>
+                <p><strong>Performance:</strong></p>
+                <span class="metric-badge">Accuracy: 68.5%</span>
+                <span class="metric-badge">Precision: 76.1%</span>
+                <span class="metric-badge">Recall: 68.5%</span>
+                <span class="metric-badge">F1-Score: 71.0%</span>
+                <p class="mt-3"><strong>Use Case:</strong> Explaining "why" a neighborhood is flagged as high-risk through transparent coefficients</p>
+            </div>
+
+            <div class="model-card">
+                <h4>2. Random Forest Classifier</h4>
+                <p><strong>Purpose:</strong> High-accuracy predictions capturing complex patterns</p>
+                <p><strong>Performance:</strong></p>
+                <span class="metric-badge">Accuracy: 81.0%</span>
+                <span class="metric-badge">Precision: 79.7%</span>
+                <span class="metric-badge">Recall: 81.0%</span>
+                <span class="metric-badge">F1-Score: 80.2%</span>
+                <p class="mt-3"><strong>Use Case:</strong> Primary operational model for resource allocation decisions</p>
+            </div>
+
+            <div class="model-card">
+                <h4>3. K-Means Clustering</h4>
+                <p><strong>Purpose:</strong> Group neighborhoods into risk tiers</p>
+                <p><strong>Risk Tiers:</strong></p>
+                <span class="metric-badge">Low Risk</span>
+                <span class="metric-badge">Moderate Risk</span>
+                <span class="metric-badge">High Risk</span>
+                <span class="metric-badge">Critical Risk</span>
+                <p class="mt-3"><strong>Use Case:</strong> Long-term strategic planning and citywide overview</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Feature Engineering</h2>
+            <p>The models use 15 key features aggregated at the neighborhood-week level:</p>
+            
+            <h5 class="mt-3">Temporal Features</h5>
+            <ul>
+                <li>Lagged crime counts (1, 2, 4 weeks prior)</li>
+                <li>Rolling averages (4-week window)</li>
+                <li>Trend slopes (12-week linear regression)</li>
+            </ul>
+            
+            <h5 class="mt-3">Socioeconomic Features</h5>
+            <ul>
+                <li>Median household income</li>
+                <li>Unemployment rate</li>
+                <li>Poverty rate</li>
+                <li>Educational attainment (% less than high school)</li>
+            </ul>
+            
+            <h5 class="mt-3">Vulnerability Features</h5>
+            <ul>
+                <li>CDC Social Vulnerability Index (overall and by theme)</li>
+                <li>Housing vacancy rate</li>
+            </ul>
+            
+            <h5 class="mt-3">Environmental Features</h5>
+            <ul>
+                <li>Abandoned building density</li>
+                <li>Population density</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Model Training & Validation</h2>
+            <p>
+                Models are trained on historical data using an 80/20 train-test split with stratified sampling 
+                to ensure balanced class representation. All models undergo 5-fold cross-validation to ensure 
+                generalizability.
+            </p>
+            <p>
+                The target variable is binary: neighborhoods with violent crime counts exceeding the 75th percentile 
+                are classified as "high-risk" (1), while others are "low-risk" (0).
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Ethical Safeguards</h2>
+            <ul>
+                <li><strong>Aggregation:</strong> All analysis at neighborhood level only (minimum population: 500)</li>
+                <li><strong>Transparency:</strong> Interpretable models with explainable predictions</li>
+                <li><strong>Bias Documentation:</strong> Clear acknowledgment of data limitations</li>
+                <li><strong>Prevention Focus:</strong> Designed for CVI organizations, not law enforcement</li>
+                <li><strong>Privacy Protection:</strong> No personal identifiers or individual-level predictions</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Limitations</h2>
+            <p>
+                This tool has important limitations that users must understand:
+            </p>
+            <ul>
+                <li>Crime data reflects <em>reported</em> incidents, which may be influenced by policing patterns and community trust</li>
+                <li>Predictions are probabilistic and cannot account for all factors influencing violence</li>
+                <li>The model is a decision-support tool and should augment, not replace, professional judgment</li>
+                <li>Performance metrics are based on historical data and may vary in real-world application</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-2"><strong>CVI Risk Predictor</strong></p>
+            <p class="mb-0">Created by Barbara D. Gaskins | Data Science Portfolio Project</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

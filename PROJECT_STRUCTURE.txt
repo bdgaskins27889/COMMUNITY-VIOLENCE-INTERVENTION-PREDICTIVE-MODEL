@@ -1,0 +1,47 @@
+.
+├── app
+│   ├── static
+│   │   ├── css
+│   │   ├── images
+│   │   └── js
+│   ├── templates
+│   │   └── index.html
+│   └── app.py
+├── data
+│   ├── boundaries
+│   ├── processed
+│   ├── raw
+│   │   └── chicago_crime_demo_20260123.csv
+│   └── DATA_SOURCES.md
+├── docs
+│   ├── API_DOCUMENTATION.md
+│   ├── ETHICAL_FRAMEWORK.md
+│   ├── METHODOLOGY.md
+│   └── USER_GUIDE.md
+├── models
+│   ├── model_evaluation
+│   └── trained_models
+├── notebooks
+├── src
+│   ├── data_collection
+│   │   ├── census_svi_data.py
+│   │   └── crime_data.py
+│   ├── modeling
+│   │   └── risk_models.py
+│   ├── preprocessing
+│   │   └── spatial_aggregation.py
+│   ├── utils
+│   │   └── config.py
+│   └── visualization
+├── tests
+├── DELIVERABLES.md
+├── LICENSE
+├── PORTFOLIO_SUMMARY.md
+├── PROJECT_DESIGN.md
+├── PROJECT_STRUCTURE.txt
+├── QUICKSTART.md
+├── README.md
+├── demo_data_collection.py
+└── requirements.txt
+
+22 directories, 22 files
